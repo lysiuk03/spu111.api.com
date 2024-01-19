@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::post("categories/create",[CategoryController::class, 'create']);
 Route::get('/categories/{id}', [CategoryController::class, 'getById']);
 Route::delete("/categories/{id}", [CategoryController::class, "delete"]);
 Route::post("/categories/edit/{id}", [CategoryController::class, "edit"]);
+
+Route::post("/register",[AuthController::class,'register']);
+Route::post("/login", [AuthController::class, 'login']);
