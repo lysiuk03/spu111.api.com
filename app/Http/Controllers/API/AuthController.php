@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     /**
-     *  Реєстрація new user
+     * Реєстрація new user.
      * @OA\Post(
      *     tags={"Auth"},
      *     path="/api/register",
@@ -89,7 +89,7 @@ class AuthController extends Controller
         return response()->json(['user'=>$user], Response::HTTP_OK);
     }
     /**
-     *   Вхід user
+     * Вхід user
      * @OA\Post(
      *     tags={"Auth"},
      *     path="/api/login",
@@ -97,7 +97,7 @@ class AuthController extends Controller
      *         @OA\MediaType(
      *             mediaType="application/json",
      *             @OA\Schema(
-     *                 required={"email","password"}
+     *                 required={"email","password"},
      *                 @OA\Property(
      *                     property="email",
      *                     type="string"
@@ -109,7 +109,9 @@ class AuthController extends Controller
      *             )
      *         )
      *     ),
-     *     @OA\Response(response="200", description="Login successful.")
+     *    @OA\Response(response="200", description="Login successful.", @OA\JsonContent(
+     *          @OA\Property(property="token", type="string", description="JWT Token")
+     *     ))
      * )
      */
     public function login(Request $request) {
