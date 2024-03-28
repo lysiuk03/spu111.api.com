@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+
+    /**
+     * Отримати всі акаунти.
+     *
+     * @OA\Get(
+     *     tags={"Auth"},
+     *     path="/api/accounts",
+     *     @OA\Response(response="200", description="List of all accounts.")
+     * )
+     */
+    public function accounts() {
+        // Отримуємо всі категорії з бази даних
+        $list = User::all();
+        // Повертаємо відповідь у форматі JSON зі списком категорій
+        return response()->json($list,200,['Charset'=>'utf-8']);
+    }
+
     /**
      * Реєстрація new user.
      * @OA\Post(
