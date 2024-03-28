@@ -12,7 +12,7 @@ use Illuminate\Routing\Controller as BaseController;
  *  Включає в себе авторизацію, валідацію та базові методи.
  * @OA\Info(
  *      version="1.0.0",
- *      title="Добрий день!",
+ *      title="Добре!",
  *      description="Demo my Project ",
  *      @OA\Contact(
  *          email="admin@gmail.com"
