@@ -35,7 +35,7 @@ class AuthController extends Controller
      * Реєстрація new user.
      * @OA\Post(
      *     tags={"Auth"},
-     *     path="/api/register",
+     *     path="/api/accounts/register",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
@@ -109,7 +109,7 @@ class AuthController extends Controller
      * Вхід user
      * @OA\Post(
      *     tags={"Auth"},
-     *     path="/api/login",
+     *     path="/api/accounts/login",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
