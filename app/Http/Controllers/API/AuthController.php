@@ -24,7 +24,7 @@ class AuthController extends Controller
      *     @OA\Response(response="200", description="List of all accounts.")
      * )
      */
-    public function accounts() {
+    public function getAll() {
         // Отримуємо всі категорії з бази даних
         $list = User::all();
         // Повертаємо відповідь у форматі JSON зі списком категорій

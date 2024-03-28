@@ -27,7 +27,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'getById']);
 Route::delete("/categories/{id}", [CategoryController::class, "delete"]);
 Route::post("/categories/edit/{id}", [CategoryController::class, "edit"]);
 
-Route::post("/accounts",[AuthController::class,'accounts']);
+Route::get("/accounts",[AuthController::class,'getAll']);
 Route::post("/register",[AuthController::class,'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
